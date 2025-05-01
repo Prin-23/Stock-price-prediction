@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import yfinance as yf
-from keras.models import load_model
+from tensorflow.keras.models import load_model
 import streamlit as st
 from sklearn.preprocessing import MinMaxScaler
 
@@ -36,7 +36,7 @@ if user_input:
         st.error("❌ No data found for this ticker. Please try a different one.")
     else:
         # Show data summary
-        st.subheader('Data from 2010 - 2019')
+        st.subheader(f'Data from {start} - {end}')
         st.write(df.describe())
 
         # Plot closing price
