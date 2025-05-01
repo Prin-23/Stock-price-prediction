@@ -7,8 +7,9 @@ import streamlit as st
 from sklearn.preprocessing import MinMaxScaler
 
 # Set time range
-start = '2010-01-01'
-end = '2019-12-31'
+from datetime import datetime
+end = datetime.now()
+start = datetime(end.year-20,end.month,end.day)
 
 # App title
 st.title('📈 Stock Trend Prediction')
